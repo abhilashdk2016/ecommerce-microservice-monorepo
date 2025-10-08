@@ -1,24 +1,68 @@
-# Turborepo starter
+# Ecommerce Mono Repo
 
-This Turborepo starter is maintained by the Turborepo core team.
+This repo is a mono repo created using turbo which hosts both the UI and microservices for a ecommerce app.
 
-## Using this example
+## Using this repo
 
-Run the following command:
+The following variables should be added in your local .env files
+
+## product-db
 
 ```sh
-npx create-turbo@latest
+Add DATABASE_URL (Postgres)
 ```
 
-## What's inside?
+## order-db
+
+```sh
+Add MONGO_URL (Mongodb)
+```
+
+## client
+
+```sh
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your clerk public key
+CLERK_SECRET_KEY=your clerk secret key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
+NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
+NEXT_PUBLIC_PRODUCT_SERVICE_URL=http://localhost:8000
+```
+
+## order-service
+
+```sh
+CLERK_PUBLISHABLE_KEY=your clerk public key
+CLERK_SECRET_KEY=our clerk secret key
+MONGO_URL=your mongodb connection string
+```
+
+## payment-service
+
+```sh
+CLERK_PUBLISHABLE_KEY=your clerk public key
+CLERK_SECRET_KEY=our clerk secret key
+```
+
+## product-service
+
+```sh
+CLERK_PUBLISHABLE_KEY=your clerk public key
+CLERK_SECRET_KEY=our clerk secret key
+```
 
 This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
+- `admin`: a [Next.js](https://nextjs.org/) app
+- `clent`: another [Next.js](https://nextjs.org/) app
+- `order-service`: a standalone service to handle orders
+- `payment-service`: a standalone service to handle payments
+- `product-service`: a standalone service to handle products
+- `@repo/order-db`: database setup for orders
+- `@repo/product-db`: database setup for products
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
