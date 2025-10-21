@@ -87,6 +87,7 @@ This Turborepo includes the following packages/apps:
 - `order-service`: a standalone service to handle orders
 - `payment-service`: a standalone service to handle payments
 - `product-service`: a standalone service to handle products
+- `@repo/kafka`: kafka setup. Run docker-compose.yml to create a kafka cluster
 - `@repo/order-db`: database setup for orders
 - `@repo/product-db`: database setup for products
 - `@repo/types`: common project which includes various type definations used across apps/packages 
