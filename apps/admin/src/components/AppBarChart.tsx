@@ -22,21 +22,21 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-// const chartData = [
-//   { month: "January", total: 186, successful: 80 },
-//   { month: "February", total: 305, successful: 200 },
-//   { month: "March", total: 237, successful: 120 },
-//   { month: "April", total: 173, successful: 100 },
-//   { month: "May", total: 209, successful: 130 },
-//   { month: "June", total: 214, successful: 140 },
-// ];
+const chartData = [
+  { month: "January", total: 186, successful: 80 },
+  { month: "February", total: 305, successful: 200 },
+  { month: "March", total: 237, successful: 120 },
+  { month: "April", total: 173, successful: 100 },
+  { month: "May", total: 209, successful: 130 },
+  { month: "June", total: 214, successful: 140 },
+];
 
 const AppBarChart = ({
   dataPromise,
 }: {
   dataPromise: Promise<OrderChartType[]>;
 }) => {
-  const chartData = use(dataPromise);
+  //const chartData = use(dataPromise);
   return (
     <div className="">
       <h1 className="text-lg font-medium mb-6">Total Revenue</h1>

@@ -31,6 +31,7 @@ const AddCategory = () => {
     defaultValues: {
       name: "",
       slug: "",
+      description: ""
     },
   });
 
@@ -96,6 +97,20 @@ const AddCategory = () => {
                       <Input {...field} />
                     </FormControl>
                     <FormDescription>Enter category slug.</FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="description"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Description</FormLabel>
+                    <FormControl>
+                      <Input {...field} />
+                    </FormControl>
+                    <FormDescription>Enter category description.</FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}

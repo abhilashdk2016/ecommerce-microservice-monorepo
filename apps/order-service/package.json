@@ -14,14 +14,16 @@
   "packageManager": "pnpm@10.17.1",
   "dependencies": {
     "@clerk/fastify": "^2.4.35",
+    "@repo/kafka": "workspace:*",
+    "@repo/order-db": "workspace:*",
     "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
     "express": "^5.1.0",
-    "fastify": "^5.6.1",
-    "@repo/order-db": "workspace:*"
+    "fastify": "^5.6.1"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
     "@repo/types": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
     "@types/node": "^20.19.18",

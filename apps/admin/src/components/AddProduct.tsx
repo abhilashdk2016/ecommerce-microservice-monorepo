@@ -336,7 +336,7 @@ const AddProduct = () => {
                                       formData.append("file", file);
                                       formData.append(
                                         "upload_preset",
-                                        "ecommerce"
+                                        "ecommerce-monorepo"
                                       );
 
                                       const res = await fetch(

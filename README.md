@@ -18,6 +18,21 @@ Add DATABASE_URL (Postgres)
 Add MONGO_URL (Mongodb)
 ```
 
+## admin
+
+```sh
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your clerk public key
+CLERK_SECRET_KEY=your clerk secret key
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
+NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
+NEXT_PUBLIC_PRODUCT_SERVICE_URL=http://localhost:8000
+NEXT_PUBLIC_PAYMENT_SERVICE_URL=http://localhost:8002
+NEXT_PUBLIC_ORDER_SERVICE_URL=http://localhost:8001
+NEXT_PUBLIC_AUTH_SERVICE_URL=http://localhost:8003
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your cloudinary cloud name
+```
+
 ## client
 
 ```sh
@@ -28,6 +43,15 @@ NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
 NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
 NEXT_PUBLIC_PRODUCT_SERVICE_URL=http://localhost:8000
+NEXT_PUBLIC_STRIPE_SECRET=your stripe secret key
+```
+
+## email-service
+
+```sh
+GOOGLE_CLIENT_ID=your google client id
+GOOGLE_CLIENT_SECRET=your google client secret
+GOOGLE_REFRESH_TOKEN=your google refresh token
 ```
 
 ## order-service
@@ -43,6 +67,8 @@ MONGO_URL=your mongodb connection string
 ```sh
 CLERK_PUBLISHABLE_KEY=your clerk public key
 CLERK_SECRET_KEY=our clerk secret key
+STRIPE_SECRET=your stripe secret key
+STRIPE_WEBHOOK_SECRET=your stripe webhook secret key
 ```
 
 ## product-service
@@ -63,6 +89,7 @@ This Turborepo includes the following packages/apps:
 - `product-service`: a standalone service to handle products
 - `@repo/order-db`: database setup for orders
 - `@repo/product-db`: database setup for products
+- `@repo/types`: common project which includes various type definations used across apps/packages 
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
